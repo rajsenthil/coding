@@ -1,4 +1,4 @@
-# The `Coding` covers the implementation of *datastructures*, algorithms and puzzles 
+# The `coding` covers the implementation of *datastructures*, algorithms and puzzles 
   
 ## Datastructures    
     Datastructure implementation of 
