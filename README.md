@@ -10,9 +10,12 @@
      
 ## Algorithms 
   Implementation of
-  * Sorting
-    * Quicksort
+  * Basic sort [Worst case of O(N2)]
+    * Selection sort
+    * Insertion sort
+  * Efficient Sort
     * Mergesort
+    * Quicksort    
     * Heapsort
   * Tree Balancing
     * Red-Black Tree
