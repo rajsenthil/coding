@@ -41,4 +41,8 @@ public class Utils {
             node = node.getNext();
         }
     }
+
+    public static Logger getLogger(Object obj){
+        return LoggerFactory.getLogger(obj.getClass().getName());
+    }
 }
