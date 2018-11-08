@@ -15,22 +15,20 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class StackTest {
+public class StackArrayTest {
+    private Logger logger = LoggerFactory.getLogger(StackArrayTest.class.getName());
 
-    private Logger logger = LoggerFactory.getLogger(StackTest.class.getName());
     @Test
     public void testStack() {
-        Stack<Integer> stack = new Stack();
+        StackArray<Integer> stack = new StackArray(10);
         stack.push(1).push(2).push(3);
-        Utils.printStack(stack);
         assert stack.size() == 3;
     }
 
     @Test
     public void testStackPushAndPop(){
-        Stack<Integer> stack = new Stack<>();
+        StackArray<Integer> stack = new StackArray(10);
         stack.push(1).push(2).push(3).push(4);
-        Utils.printStack(stack);
         logger.info(stack.pop().toString());
         logger.info(stack.pop().toString());
         assert stack.size() == 2;
