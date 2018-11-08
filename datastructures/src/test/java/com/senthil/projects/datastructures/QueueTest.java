@@ -10,23 +10,20 @@
 
 package com.senthil.projects.datastructures;
 
-public class LinkedListNode<T> {
-    public LinkedListNode next;
-    public T data;
+import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-    public LinkedListNode(T data){
-        this.data = data;
-    }
+public class QueueTest {
 
-    public void display(){
-        System.out.printf("Data: %s",data);
-    }
+    Logger logger = LoggerFactory.getLogger(QueueTest.class.getName());
 
-    public LinkedListNode getNext() {
-        return next;
-    }
-
-    public T getData() {
-        return data;
+    @Test
+    public void testQueueAdd() {
+        Queue<Integer> queue = new Queue<>();
+        queue.add(1).add(2).add(3).add(4).add(5);
+        while (queue.peek() != null){
+            logger.info(queue.remove().toString());
+        }
     }
 }
