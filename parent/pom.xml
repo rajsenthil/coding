@@ -65,9 +65,6 @@
     </dependencies>
   </dependencyManagement>
 
-  <modules>
-    <module>../datastructures</module>
-  </modules>
   <build>
     <plugins>
       <plugin>
