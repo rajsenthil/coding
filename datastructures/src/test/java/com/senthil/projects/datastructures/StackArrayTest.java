@@ -22,6 +22,7 @@ public class StackArrayTest {
     public void testStack() {
         StackArray<Integer> stack = new StackArray(10);
         stack.push(1).push(2).push(3);
+        stack.display();
         assert stack.size() == 3;
     }
 
@@ -31,6 +32,7 @@ public class StackArrayTest {
         stack.push(1).push(2).push(3).push(4);
         logger.info(stack.pop().toString());
         logger.info(stack.pop().toString());
+        stack.display();
         assert stack.size() == 2;
     }
 }

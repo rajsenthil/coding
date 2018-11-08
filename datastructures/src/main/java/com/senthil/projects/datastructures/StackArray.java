@@ -10,12 +10,18 @@
 
 package com.senthil.projects.datastructures;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Arrays;
 import java.util.EmptyStackException;
 
 /**
  * This stack uses array for storing data
  */
 public class StackArray<T> {
+
+    private Logger logger = LoggerFactory.getLogger(StackArray.class.getName());
 
     Object[] datas;
     private static int size = 0;
@@ -54,5 +60,9 @@ public class StackArray<T> {
         Object[] temp = new Object[size];
         for (int i = 0; i < nitems; i++) temp[i] = datas[i];
         datas = temp;
+    }
+
+    public void display() {
+        logger.info(Arrays.toString(datas));
     }
 }
