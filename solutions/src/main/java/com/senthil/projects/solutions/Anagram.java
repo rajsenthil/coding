@@ -74,7 +74,7 @@ public class Anagram {
     }
 
     private void print(char[] input) {
-        logger.info(Arrays.toString(Arrays.copyOfRange(input, 1, input.length)));
+        logger.info(new String(Arrays.copyOfRange(input, 1, input.length)));
         printCount++;
     }
 
