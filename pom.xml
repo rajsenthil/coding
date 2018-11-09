@@ -22,6 +22,7 @@
   <modules>
     <module>datastructures</module>
     <module>algorithm</module>
+    <module>solutions</module>
   </modules>
 
 </project>
