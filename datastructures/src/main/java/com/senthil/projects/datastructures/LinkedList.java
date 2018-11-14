@@ -63,7 +63,7 @@ public class LinkedList<T> {
         if (head == null) return;
         LinkedListNode<T> current = head.next;
         LinkedListNode prev = head;
-        Set<T> set = new HashSet<>();
+        Set<T> set = new HashSet();
         set.add(head.data);
         while (current != null){
             if (set.contains(current.data)) {

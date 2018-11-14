@@ -34,7 +34,7 @@ public class Stack<T> {
     private StackNode<T> last = null;
 
     public Stack push(T data){
-        StackNode<T> node = new StackNode<>(data);
+        StackNode<T> node = new StackNode(data);
         itemCount++;
         if (last == null) {
             last = node;

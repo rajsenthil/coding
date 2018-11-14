@@ -27,7 +27,7 @@ public class Queue<T> {
     }
 
     public Queue<T> add(T data){
-        QueueNode<T> node = new QueueNode<>(data);
+        QueueNode<T> node = new QueueNode(data);
         if (last == null) {
             last = node;
         } else {
