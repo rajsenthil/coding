@@ -10,6 +10,7 @@
 
 package com.senthil.projects.datastructures;
 
+import com.senthil.projects.algorithms.commons.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,7 +22,7 @@ import java.util.EmptyStackException;
  */
 public class StackArray<T> {
 
-    private Logger logger = LoggerFactory.getLogger(StackArray.class.getName());
+    private Logger logger = Utils.getLogger(this);
 
     Object[] datas;
     private static int size = 0;

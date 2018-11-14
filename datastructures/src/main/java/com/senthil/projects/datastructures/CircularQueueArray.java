@@ -10,7 +10,7 @@
 
 package com.senthil.projects.datastructures;
 
-import com.senthil.projects.datastructures.util.Utils;
+import com.senthil.projects.algorithms.commons.Utils;
 import org.slf4j.Logger;
 
 import java.util.Arrays;

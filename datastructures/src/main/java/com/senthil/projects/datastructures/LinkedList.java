@@ -10,14 +10,14 @@
 
 package com.senthil.projects.datastructures;
 
+import com.senthil.projects.algorithms.commons.Utils;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class LinkedList<T> {
-    private static Logger logger = LoggerFactory.getLogger(LinkedList.class.getName());
+    private static Logger logger = Utils.getLogger(LinkedList.class);
     LinkedListNode<T> head;
     int size = 0; // Just for inspecting...
 

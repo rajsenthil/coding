@@ -10,13 +10,13 @@
 
 package com.senthil.projects.solutions;
 
+import com.senthil.projects.algorithms.commons.Utils;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class AnagramTest {
 
-    private Logger logger = LoggerFactory.getLogger(AnagramTest.class.getName());
+    private Logger logger = Utils.getLogger(this);
 
     @Test
     public void testAnagram() {

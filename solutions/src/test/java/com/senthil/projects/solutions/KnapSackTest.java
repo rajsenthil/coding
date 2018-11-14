@@ -10,6 +10,7 @@
 
 package com.senthil.projects.solutions;
 
+import com.senthil.projects.algorithms.commons.Utils;
 import com.senthil.projects.datastructures.Stack;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -19,7 +20,7 @@ import java.util.Arrays;
 
 public class KnapSackTest {
 
-    Logger logger = LoggerFactory.getLogger(KnapSackTest.class.getName());
+    Logger logger = Utils.getLogger(this);
 
     @Test
     public void testKnapSack() {

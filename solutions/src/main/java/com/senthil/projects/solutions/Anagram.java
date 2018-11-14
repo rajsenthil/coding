@@ -11,6 +11,7 @@
 package com.senthil.projects.solutions;
 
 
+import com.senthil.projects.algorithms.commons.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +42,7 @@ import java.util.Arrays;
  */
 public class Anagram {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass().getName());
+    private Logger logger = Utils.getLogger(this);
 
     char[] input;
     int size;

@@ -10,9 +10,9 @@
 
 package com.senthil.projects.solutions;
 
+import com.senthil.projects.algorithms.commons.Utils;
 import com.senthil.projects.datastructures.Stack;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * knapsack (w) = target(w) => w;
@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
  */
 public class KnapSack {
 
-    Logger logger = LoggerFactory.getLogger(KnapSack.class.getName());
+    Logger logger = Utils.getLogger(this);
 
     Stack<Integer> stack = new Stack<>();
     public int[] input;
