@@ -27,6 +27,7 @@
   
   Medium
   * Anagram 
+  * Coin change
   
   Hard
   * 
