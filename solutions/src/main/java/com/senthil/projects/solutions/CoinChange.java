@@ -42,7 +42,7 @@ public class CoinChange {
 
 
         for (int i = 0; i < total+1; i++) {
-            T[i] = Integer.MAX_VALUE-1;
+            T[i] = Integer.MAX_VALUE;
             P[i] = -1;
         }
         T[0] = 0;
@@ -54,6 +54,8 @@ public class CoinChange {
             for (int j = 0; j <= total; j++) {
                 if (j >= coins[i]) {
                     logger.info("Current total {}", j);
+                    //Note: Integer.MAX_VALUE + will overflow. So instead of <code>T[j] > T[j-coins[i]] + 1</code>
+                    // the comparison is done against <code>T[j] -1 > T[j-coins[i]]</code>
                     if  (T[j]-1 > (T[j-coins[i]])) {    // if the coin needs to picked?
                         T[j] = T[j-coins[i]]+1;       // pick it
                         P[j] = i;                   // The picked up coin index
