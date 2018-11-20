@@ -28,7 +28,7 @@ public class KnapSack_0_1Test {
         logger.info("Given costs: {}", Arrays.toString(costs));
         KnapSack_0_1 knapSack01 = new KnapSack_0_1();
         int weight = 9;
-        logger.info("Maximum costs for {} is {} ", weight, knapSack01.knapSack01(weight, costs, weights));
-
+        logger.info("Maximum costs for {} is {} ", weight, KnapSack_0_1.knapSack01(weight, costs, weights));
+        logger.info("Selected Items: {}", Arrays.toString(knapSack01.selectedWeights()));
     }
 }

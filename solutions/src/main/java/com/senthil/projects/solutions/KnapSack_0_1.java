@@ -13,7 +13,9 @@ package com.senthil.projects.solutions;
 import com.senthil.projects.algorithms.commons.Utils;
 import org.slf4j.Logger;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * https://en.wikipedia.org/wiki/Knapsack_problem#0/1_knapsack_problem
@@ -25,7 +27,12 @@ import java.util.Arrays;
  */
 public class KnapSack_0_1 {
 
-    Logger logger = Utils.getLogger(this);
+    private static Logger logger = Utils.getLogger(KnapSack_0_1.class);
+
+    private static  int[][] weightCosts;
+    private static int totalWeight;
+    private static int[] weights;
+    private static int[] costs;
 
     /*
     ** Knapsack 0/1 is pick or not to pick as a whole.
@@ -34,32 +41,55 @@ public class KnapSack_0_1 {
     *  maximize the sum of (x[i]*c[i]) subject to, sum of (x[i]*w[i]) <= W, where is the total weight.
     *
     */
-    public int knapSack01(int totalWeight, int[] costs, int[] weights) {
-        logger.info("Total Weight:{}; Wight Index: {}; weight: {}", totalWeight, Arrays.toString(costs), Arrays.toString(weights));
+    public static int knapSack01(int totalWeight, int[] costs, int[] weights) {
 
+        logger.info("Total Weight:{}; Wight Index: {}; weight: {}", totalWeight, Arrays.toString(costs), Arrays.toString(weights));
+        weightCosts = new int[weights.length][totalWeight+1];
+        KnapSack_0_1.weights = weights;
+        KnapSack_0_1.totalWeight = totalWeight;
+        KnapSack_0_1.costs = costs;
         if (costs.length != weights.length) {
             logger.info("Please enter the cost for the corresponding weight. The number of costs and weights should match");
             return -1;
         }
-        int[][] weightCosts = new int[weights.length][totalWeight+1];
+
         for(int i = 0; i <= weights.length; i++) weightCosts[0][i] = 0;
 
         for(int i = 0; i < weights.length; i++) {
             for(int j = 1; j <= totalWeight; j++) {
-//                logger.info("                    = {} + ({} > 0 ? {} : 0), ({} >=0 ? {} : 0))", costs[i], c, costs[c], w, weightCosts[w][j]);
                 int w = i - 1;
                 if (weights[i] <= j) {
                     int c = j - weights[i];
-                    logger.info("weightCosts[{}][{}] = Math.max(costs[{}] + ({} > 0 ? costs[{}] : 0), ({} >=0 ? weightCosts[{}][{}] : 0))", i, j, i, c, c, w, w, j);
                     weightCosts[i][j] = Math.max(costs[i] + (c > 0 ? weightCosts[i][c] : 0), (w >= 0 ? weightCosts[w][j] : 0));
                 } else {
                     weightCosts[i][j] = w >= 0 ?weightCosts[i-1][j] : 0;
                 }
             }
         }
-
+        logger.info("Weight Costs array is {}", Arrays.deepToString(weightCosts));
         return weightCosts[weights.length-1][totalWeight];
     }
 
 
+    public static Integer[] selectedWeights() {
+        List<Integer> selectedItems = new ArrayList();
+        if (weightCosts != null) {
+            int total = 0;
+            int i = weightCosts.length-1;
+            int j = weightCosts[0].length-1;
+            while (total <= totalWeight) {
+                if (weightCosts[i][j] != weightCosts[i-1][j]) {
+                    selectedItems.add(weights[i]);
+                    total = total + weights[i];
+                    j = j - weights[i];
+                }
+                --i;
+                if (i == 0) {
+                    for (int k = 0; k < weightCosts[i][j]/costs[0]; k++) selectedItems.add(weights[0]);
+                    break;
+                }
+            }
+        }
+        return selectedItems.toArray(new Integer[selectedItems.size()]);
+    }
 }
