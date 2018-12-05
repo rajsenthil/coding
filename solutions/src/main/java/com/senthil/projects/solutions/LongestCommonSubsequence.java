@@ -43,7 +43,7 @@ public class LongestCommonSubsequence {
         }
         return memoization[i][j];
     }
-    
+
     public int max(int left, int right) {
         return left > right ? left : right;
     }

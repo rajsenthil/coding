@@ -38,7 +38,7 @@ public class KnapSack_0_1 {
     ** Knapsack 0/1 is pick or not to pick as a whole.
     *  As given in the wiki link https://en.wikipedia.org/wiki/Knapsack_problem#0/1_knapsack_problem,
     *  if c[i] is the selling costs of i-th weight w[i], then
-    *  maximize the sum of (x[i]*c[i]) subject to, sum of (x[i]*w[i]) <= W, where is the total weight.
+    *  maximize the sum of (x[i]*c[i]) subject to, sum of (x[i]*w[i]) <= W, where 'W' is the total weight.
     *
     */
     public static int knapSack01(int totalWeight, int[] costs, int[] weights) {
