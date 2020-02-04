@@ -29,7 +29,9 @@ public class MergeSortV2Test {
     public void sortArray() {
         int[] items = {11, 2, 85, 5, 17, 37, 1};
         MergeSortV2 mergeSortV2 = new MergeSortV2();
+        int[] expected = {1, 2, 5, 11, 17, 37, 85};
         int[] mergedArray = mergeSortV2.sort(items);
-        System.out.println(Arrays.toString(mergedArray));
+
+        assert Arrays.equals(expected, mergedArray);
     }
 }
