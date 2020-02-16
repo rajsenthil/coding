@@ -17,7 +17,7 @@ public class LinkedListAdditionTest {
         LinkedListAddition linkedListAddition = new LinkedListAddition();
         ListNode result = linkedListAddition.addTwoNumbers(l1, l2);
 
-        while (result.next != null) {
+        while (result != null) {
             System.out.println(result.val);
             result = result.next;
         }
