@@ -23,9 +23,14 @@ public class LinkedListAddition {
             l2 = l2.next;
             l3.val = rem;
             ListNode next = null;
-            if (l1 !=null || l2 != null) next = new ListNode(0);
-            l3.next = next;
-            l3 = l3.next;
+            if (l1 !=null || l2 != null) {
+                next = new ListNode(0);
+                l3.next = next;
+                l3 = l3.next;
+            }
+        }
+        if (carry > 0) {
+            l3.next = new ListNode(carry);
         }
         return root;
     }

@@ -22,4 +22,19 @@ public class LinkedListAdditionTest {
             result = result.next;
         }
     }
+
+    @Test
+    public void addTwoNumnbersV2() {
+        ListNode l1 = new ListNode(5);
+
+        ListNode l2 = new ListNode(5);
+
+        LinkedListAddition linkedListAddition = new LinkedListAddition();
+        ListNode result = linkedListAddition.addTwoNumbers(l1, l2);
+
+        while (result != null) {
+            System.out.println(result.val);
+            result = result.next;
+        }
+    }
 }
