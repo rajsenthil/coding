@@ -10,7 +10,9 @@ public class LinkedListAddition {
         int carry = 0;
 
         while (l1 != null || l2 != null) {
-            result = l1.val + l2.val + carry;
+            result += l1 != null ? l1.val : 0;
+            result += l2 != null ? l2.val : 0;
+            result += carry;
             int rem = 0;
             if (result >= 10) {
                 carry = result / 10;
@@ -19,8 +21,8 @@ public class LinkedListAddition {
                 carry = 0;
                 rem = result;
             }
-            l1 = l1.next;
-            l2 = l2.next;
+            l1 = (l1 != null) ? l1.next : null;
+            l2 = (l2 != null) ? l2.next : null;
             l3.val = rem;
             ListNode next = null;
             if (l1 !=null || l2 != null) {
@@ -28,6 +30,7 @@ public class LinkedListAddition {
                 l3.next = next;
                 l3 = l3.next;
             }
+            result = 0;
         }
         if (carry > 0) {
             l3.next = new ListNode(carry);
