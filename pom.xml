@@ -24,6 +24,7 @@
     <module>algorithm</module>
     <module>solutions</module>
     <module>common</module>
+    <module>dyn-pgm</module>
   </modules>
 
 </project>

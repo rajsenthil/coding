@@ -6,7 +6,9 @@ target/
 *.iml
 .idea/
 .eclipse
-
+**/.classpath
+**/.project
+**/.settings
 # BlueJ files
 *.ctxt
 
