@@ -12,6 +12,7 @@ public class TestPartition {
 	public void testPartition() {
 		int[] input = new int[] { 10, 80, 30, 90, 40, 50, 70 };
 		input = new int[] { 30, 10 };
+		//input = new int[] { 10 };
 		int pivot = 70;
 		log.info("input: {}", input);
 		Partition app = new Partition();
