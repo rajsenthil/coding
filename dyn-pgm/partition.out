@@ -36,10 +36,10 @@
  T E S T S
 -------------------------------------------------------
 Running com.senthil.projects.dyn_pgm.TestPartition
-2022-08-28 06:31:17 INFO  TestPartition:16 - input: [30, 10]
-2022-08-28 06:31:17 INFO  Partition:29 - Shift the item in [30, 10] towards right starting from lo: 0
-2022-08-28 06:31:17 INFO  Partition:34 - items partitioned as: [10, 30]
-2022-08-28 06:31:17 INFO  TestPartition:19 - result = 0
+2022-08-30 06:46:41 INFO  TestPartition:17 - input: [30, 10]
+2022-08-30 06:46:41 INFO  Partition:29 - Shift the item in [30, 10] towards right starting from lo: 0
+2022-08-30 06:46:41 INFO  Partition:34 - items partitioned as: [10, 30]
+2022-08-30 06:46:41 INFO  TestPartition:20 - result = 0
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 
 Results :
@@ -49,6 +49,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.678 s
-[INFO] Finished at: 2022-08-28T06:31:17-07:00
+[INFO] Total time:  0.587 s
+[INFO] Finished at: 2022-08-30T06:46:41-07:00
 [INFO] ------------------------------------------------------------------------
