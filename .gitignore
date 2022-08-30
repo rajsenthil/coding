@@ -11,7 +11,9 @@ target/
 **/.settings
 # BlueJ files
 *.ctxt
-
+logs/**
+**/*.log.*
+**/*.out
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
